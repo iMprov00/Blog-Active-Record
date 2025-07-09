@@ -1,8 +1,15 @@
 <h2>Новый пост</h2>
-
+<br>
 <form action="/new" method="POST" role="form">
 	<div class="form-floating">
-		<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-		<label for="floatingTextarea2">Comments</label>
+		<label for="floatingTextarea">Заголовок</label>
+	  	<textarea class="form-control" name="post[head]" placeholder="Напишите название поста" id="floatingTextarea"></textarea>
 	</div>
+	<br>
+	<div class="form-floating">
+		<label for="floatingTextarea2">Описание</label>
+		<textarea class="form-control" name="post[content]" placeholder="Напишите описание" id="floatingTextarea2" style="height: 150px"></textarea>
+	</div>
+	<br>
+	 <button type="submit" class="btn btn-primary">Создать</button>
 </form>
