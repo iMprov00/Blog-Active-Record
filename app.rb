@@ -5,51 +5,55 @@ require 'sinatra/activerecord'
 
 set :database, {adapter: "sqlite3", database: "barbershop.db"}
 
-class Client < ActiveRecord::Base
+class Post < ActiveRecord::Base
 
-	validates :name, presence: true
-	validates :phone, presence: true
-	validates :datestamp, presence: true
-	validates :color, presence: true
+	# validates :name, presence: true
+	# validates :phone, presence: true
+	# validates :datestamp, presence: true
+	# validates :color, presence: true
 
 end
 
-class Barber < ActiveRecord::Base
+class User < ActiveRecord::Base
+
+end
+
+class Comment < ActiveRecord::Base
 
 end
 
 get '/' do 
 
-	@barbers = Barber.all
-	erb :index
+	# @barbers = Barber.all
+	# erb :index
 end
 
-get '/visit' do  
-	@c = Client.new params[:client] 
-	@barbers = Barber.all
-	erb :visit
+# get '/visit' do  
+# 	@c = Client.new params[:client] 
+# 	@barbers = Barber.all
+# 	erb :visit
 
-end
+# end
 
-post '/visit' do  
+# post '/visit' do  
 
-	@c = Client.new params[:client]
-	if @c.save
-		erb "Вы записались!"
-	else
-		@error = @c.errors.full_messages.first
-		erb :visit
-	end
+# 	@c = Client.new params[:client]
+# 	if @c.save
+# 		erb "Вы записались!"
+# 	else
+# 		@error = @c.errors.full_messages.first
+# 		erb :visit
+# 	end
 
-end
+# end
 
-get '/barber/:id' do 
+# get '/barber/:id' do 
 
-	@barber = Barber.find(params[:id])
+# 	@barber = Barber.find(params[:id])
 
 	
 
-	erb :barber
+# 	erb :barber
 
-end
+# end
 
