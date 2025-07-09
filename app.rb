@@ -28,6 +28,12 @@ get '/' do
 	erb "hello"
 end
 
+get '/new' do  
+
+	erb :new
+
+end
+
 # get '/visit' do  
 # 	@c = Client.new params[:client] 
 # 	@barbers = Barber.all
