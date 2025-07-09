@@ -20,7 +20,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_09_004735) do
 
   create_table "posts", force: :cascade do |t|
     t.text "head"
-    t.text "comment"
+    t.text "contetn"
     t.text "datestamp"
     t.text "image_path"
     t.datetime "created_at", null: false

@@ -30,6 +30,7 @@ end
 
 get '/new' do  
 
+	@p = Post.new params[:posts] 
 	erb :new
 
 end
