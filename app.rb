@@ -25,7 +25,7 @@ end
 get '/' do 
 
 	# @barbers = Barber.all
-	# erb :index
+	erb "hello"
 end
 
 # get '/visit' do  
