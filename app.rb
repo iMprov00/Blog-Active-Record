@@ -3,7 +3,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
-set :database, {adapter: "sqlite3", database: "barbershop.db"}
+set :database, {adapter: "sqlite3", database: "blog.db"}
 
 class Post < ActiveRecord::Base
 
